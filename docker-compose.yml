@@ -26,3 +26,5 @@ services:
     command:
     - --base-path=/data/state/validator
     - --validator
+    - --ws-port=9944
+    - --port=30333

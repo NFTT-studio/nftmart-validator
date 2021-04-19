@@ -5,6 +5,8 @@
     }
   }
   route /ws {
-    reverse_proxy http://nftmart:9944
+    reverse_proxy http://nftmart:9944 {
+      header_up Host "localhost:9944"
+    }
   }
 }
