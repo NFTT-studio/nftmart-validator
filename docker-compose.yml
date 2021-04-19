@@ -11,7 +11,7 @@ services:
     volumes:
     - ./Caddyfile:/Caddyfile
     ports:
-    - 2021:80
+    - 9944:9944
   nftmart:
     restart: always
     env_file: .env
@@ -20,9 +20,17 @@ services:
     - ./entrypoint.rc:/entrypoint.rc
     - ./state/node5:/data/state/node5
     ports:
-    - "${PORT5}:${PORT5}"
-    - "${RPC_PORT5}:${RPC_PORT5}"
-    - "${WS_PORT5}:${WS_PORT5}"
-    entrypoint: [ "bash", "-c" ]
+    - 30333:30333
+  # - 9615:9615
+  # - 9933:9933
+    entrypoint: [ "/entrypoint.rc" ]
     command:
-    - source /entrypoint.rc && node5
+    - --base-path=/data/state/node5
+    - --validator
+    - --node-key=${NODE_KEY5}
+    - --bootnodes=/dns/${IP1}/tcp/${PORT1}/p2p/${NODE_PEER_ID1}
+    - --bootnodes=/dns/${IP2}/tcp/${PORT2}/p2p/${NODE_PEER_ID2}
+    - --ws-port=9944
+    - --port=30333
+  # - --prometheus-port=9615
+  # - --rpc-port=9933

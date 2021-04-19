@@ -1,17 +1,11 @@
-{
-  http_port 80
-  debug
-  admin off
-}
-
-:80 {
+:9944 {
   route /* {
     file_server {
       root /srv/build
     }
   }
   route /ws {
-    reverse_proxy http://nftmart:9948 {
+    reverse_proxy http://nftmart:9944 {
       header_up Host {http.reverse_proxy.upstream.hostport}
     }
   }
