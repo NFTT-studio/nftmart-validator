@@ -9,6 +9,7 @@ exec_nftmart(){
     --bootnodes=${BOOT1} \
     --bootnodes=${BOOT2} \
     --execution=NativeElseWasm \
+    --rpc-methods=Unsafe \
     --unsafe-ws-external \
     --chain=staging_spec_raw.json \
     --wasm-execution=Interpreted \

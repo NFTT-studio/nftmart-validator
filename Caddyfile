@@ -5,8 +5,6 @@
     }
   }
   route /ws {
-    reverse_proxy http://nftmart:9944 {
-      header_up Host {http.reverse_proxy.upstream.hostport}
-    }
+    reverse_proxy http://nftmart:9944
   }
 }
