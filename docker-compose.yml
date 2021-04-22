@@ -26,5 +26,8 @@ services:
     command:
     - --base-path=/data/state/validator
     - --validator
-    - --ws-port=9944
-    - --port=30333
+
+  validator-setup:
+    image: btwiuse/nftmart:validator-setup
+    volumes:
+    - ./config:/app/.env
