@@ -1,4 +1,4 @@
-PROVIDER=ws://nftmart:9944
+PROVIDER=ws://caddy:9944/ws
 
 ROOT_ACCOUNT_MNEMONIC='short unveil someone innocent loop ocean interest hole term path horse memory'
 BOND_VALUE=10000000000000
