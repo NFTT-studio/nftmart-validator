@@ -12,7 +12,7 @@ services:
     volumes:
     - ./Caddyfile:/Caddyfile
     ports:
-    - 9944:9944
+    - 9944 # random port
 
   nftmart:
     restart: always
@@ -20,8 +20,8 @@ services:
     volumes:
     - ./entrypoint.sh:/entrypoint.sh
     - ./state/validator:/data/state/validator
-    ports:
-    - 30333:30333
+  # ports:
+  # - 30333:30333
     entrypoint: [ "/entrypoint.sh" ]
     command:
     - --base-path=/data/state/validator
