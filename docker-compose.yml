@@ -27,7 +27,8 @@ services:
     - --base-path=/data/state/validator
     - --validator
 
-  validator-setup:
+  add-validator:
+    profiles: ["add-validator"]
     image: btwiuse/nftmart:validator-setup
     volumes:
     - ./config:/app/.env
