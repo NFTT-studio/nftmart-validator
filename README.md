@@ -2,6 +2,17 @@
 
 自动添加验证人流程
 
+0. 安装最新的 docker-compose https://github.com/docker/compose/releases
+```
+# Linux amd64
+$ curl -sL https://github.com/docker/compose/releases/download/1.29.1/docker-compose-Linux-x86_64 > docker-compose
+$ chmod +x docker-compose
+
+# macOS amd64
+$ curl -sL https://github.com/docker/compose/releases/download/1.29.1/docker-compose-Darwin-x86_64 > docker-compose
+$ chmod +x docker-compose
+```
+
 1. 克隆本仓库，并切换到 auto-validator 分支
 ```
 $ git clone -b auto-validator https://github.com/NFTT-studio/nftmart-validator && cd nftmart-validator
