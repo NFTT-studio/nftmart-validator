@@ -13,6 +13,7 @@ exec_nftmart(){
     --unsafe-ws-external \
     --chain=staging_spec_raw.json \
     --wasm-execution=Interpreted \
+    --rpc-cors=all \
     --ws-port=9944 \
     --port=30333 \
     "$@"
