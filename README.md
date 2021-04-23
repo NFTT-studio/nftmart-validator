@@ -53,3 +53,9 @@ $ docker-compose up add-validator
 ```
 
 成功执行后，在 https://polkadot.js.org/apps/?rpc=wss://staging-ws.nftmart.io#/staking/waiting (或者 http://localhost:9944/#/staking/waiting) 可以看到名为 `//MY-VALIDATOR-STASH-ACCOUNT` 的账号已经进入验证人等待队列了
+
+## 相关资源
+- `add-validator` 命令的源码: https://github.com/NFTT-studio/nftmart/blob/nftmart-cli/nodejs-demo/add-validator.mjs
+
+## 已知问题
+- `setIdentity` 方法这里的交易有一定概率抛出错误，需要处理错误 (https://github.com/NFTT-studio/nftmart/blob/nftmart-cli/nodejs-demo/add-validator.mjs#L54-L70)
