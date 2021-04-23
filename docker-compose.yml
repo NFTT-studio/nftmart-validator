@@ -30,6 +30,7 @@ services:
   add-validator:
     profiles: ["add-validator"]
     image: btwiuse/nftmart:cli
+    pull_policy: always
     command:
     - add-validator
     - ./config
