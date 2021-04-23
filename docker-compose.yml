@@ -29,6 +29,9 @@ services:
 
   add-validator:
     profiles: ["add-validator"]
-    image: btwiuse/nftmart:validator-setup
+    image: btwiuse/nftmart:cli
+    command:
+    - add-validator
+    - ./config
     volumes:
-    - ./config:/app/.env
+    - ./config:/app/config
