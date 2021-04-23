@@ -12,26 +12,26 @@ $ git clone -b auto-validator https://github.com/NFTT-studio/nftmart-validator &
 $ docker-compose up
 ```
 
-3. 区块同步完成后，编辑 config 文件的后两行，将 `STASH_ACCOUNT_MNEMONIC` 和`CONTROLLER_ACCOUNT_MNEMONIC` 改成自己的值，只要不与其他节点冲突即可，例如
+3. 区块同步完成后，编辑 config (YAML 格式) 文件，将 `STASH_ACCOUNT_MNEMONIC` 和`CONTROLLER_ACCOUNT_MNEMONIC` 改成自己特有的值，只要不与其他现有节点冲突即可，例如
 
 ```
-STASH_ACCOUNT_MNEMONIC=//my-nftmart-validator-stash-account
-CONTROLLER_ACCOUNT_MNEMONIC=//my-nftmart-validator-controller-account
-```
-
-```
-STASH_ACCOUNT_MNEMONIC=//Alice
-CONTROLLER_ACCOUNT_MNEMONIC=//Bob
+STASH_ACCOUNT_MNEMONIC: //my-nftmart-validator-stash-account
+CONTROLLER_ACCOUNT_MNEMONIC: //my-nftmart-validator-controller-account
 ```
 
 ```
-STASH_ACCOUNT_MNEMONIC=//Charlos/stash
-CONTROLLER_ACCOUNT_MNEMONIC=//Carlos/controller
+STASH_ACCOUNT_MNEMONIC: //Alice
+CONTROLLER_ACCOUNT_MNEMONIC: //Bob
 ```
 
 ```
-STASH_ACCOUNT_MNEMONIC=//elon-musk-1
-CONTROLLER_ACCOUNT_MNEMONIC=//666
+STASH_ACCOUNT_MNEMONIC: //Charlos/stash
+CONTROLLER_ACCOUNT_MNEMONIC: //Carlos/controller
+```
+
+```
+STASH_ACCOUNT_MNEMONIC: //elon-musk-1
+CONTROLLER_ACCOUNT_MNEMONIC: //666
 ```
 
 都是可以的
