@@ -1,1 +1,3 @@
 state*
+dist*
+!dist/add-validator/index.js

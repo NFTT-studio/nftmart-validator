@@ -1,7 +1,8 @@
-PROVIDER: ws://caddy:9944/ws
+# PROVIDER: ws://caddy:9944/ws
+PROVIDER: ws://127.0.0.1:9944
 ROOT_ACCOUNT_MNEMONIC: short unveil someone innocent loop ocean interest hole term path horse memory
 BOND_VALUE: 10000000000000
 REWARD_COMMISSION: 5
 WAIT_SECONDS: 15
-STASH_ACCOUNT_MNEMONIC: //change-me-5
-CONTROLLER_ACCOUNT_MNEMONIC: //change-me-too-5
+STASH_ACCOUNT_MNEMONIC: //poco
+CONTROLLER_ACCOUNT_MNEMONIC: //poco
