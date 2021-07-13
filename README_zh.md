@@ -74,6 +74,7 @@ docker version
 ```
 
 应该显示 Client 和 Server 两者的信息：
+
 ![](https://i.imgur.com/K3Q0Q48.png)
 
 如果只有 Client 信息，那么可能是 Server 没有运行，或者当前用户没有 docker 分组权限

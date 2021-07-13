@@ -64,6 +64,7 @@ docker version
 ```
 
 Should show Client and Server infomations：
+
 ![](https://i.imgur.com/K3Q0Q48.png)
 
 If you only got client infomation , maybe you need to check the cmd above.
