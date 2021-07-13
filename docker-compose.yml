@@ -12,6 +12,7 @@ services:
     - 30333:30333
     entrypoint: [ "/entrypoint.sh" ]
     command:
+    - --name=${NAME:-changeme}
     - --base-path=/data/
     - --validator
     - --ws-port=9944
