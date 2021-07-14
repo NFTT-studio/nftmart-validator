@@ -8,6 +8,7 @@ services:
     - /etc/localtime:/etc/localtime
     - ./entrypoint.sh:/entrypoint.sh
     - ./data/:/data/
+    - ./stagingRaw.json/:/stagingRaw.json
     ports:
     - 30333:30333
     entrypoint: [ "/entrypoint.sh" ]

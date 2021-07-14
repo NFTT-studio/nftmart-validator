@@ -12,7 +12,7 @@ exec_nftmart(){
     --execution=NativeElseWasm \
     --rpc-methods=Unsafe \
     --unsafe-ws-external \
-    --chain=staging \
+    --chain=/stagingRaw.json \
     "$@"
 }
 
