@@ -1,8 +1,6 @@
 # Become a validator of NFTMart testnet  
 
-
-
-[TOC]
+[中文版](https://github.com/NFTT-studio/nftmart-validator/blob/staging/README_zh.md)
 
 # Prepare working
 
@@ -10,7 +8,7 @@ Preconditions
 
 1. Have a account that has some NMT token
 （You need some NMT to apply validator on-chain）
-2. One Linux server with 2 core 4 GB memory and 50GB hard disk
+2. One Linux server with 2 core 4 GB memory and 100GB hard disk
 3. A browser with [Polkadot{.js} extension](https://polkadot.js.org/extension/), such as  Chrome，Firefox
 
 
@@ -64,7 +62,6 @@ docker version
 ```
 
 Should show Client and Server infomations：
-
 ![](https://i.imgur.com/K3Q0Q48.png)
 
 If you only got client infomation , maybe you need to check the cmd above.
@@ -248,8 +245,3 @@ If your node offline too offten, it maybe slash by the network, and lose the tok
 
 
 
-:::info
-**Find this document incomplete?** Leave a comment!
-:::
-
-###### tags: `Templates` `Documentation`

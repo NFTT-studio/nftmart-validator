@@ -1,13 +1,7 @@
 # 成为 NFTMart 测试网验证人
 
+[English version](https://github.com/NFTT-studio/nftmart-validator/blob/staging/README.md)
 
-![downloads](https://img.shields.io/github/downloads/atom/atom/total.svg)
-![build](https://img.shields.io/appveyor/ci/:user/:repo.svg)
-[![chat](https://img.shields.io/discord/:serverId.svg)](https://discord.gg/jNMeDvvvvR)
-
-## 目录
-
-[TOC]
 
 # 准备工作
 
@@ -17,7 +11,7 @@
 
     （成为验证人需要质押一定量的资金）
 
-2. 一台满足配置要求的 Linux 服务器
+2. 一台满足配置要求的 Linux 服务器（ 2 核 4 GB 内存  100GB 硬盘）
 
     （成为验证人需要维护自己的节点）
 
@@ -74,7 +68,6 @@ docker version
 ```
 
 应该显示 Client 和 Server 两者的信息：
-
 ![](https://i.imgur.com/K3Q0Q48.png)
 
 如果只有 Client 信息，那么可能是 Server 没有运行，或者当前用户没有 docker 分组权限
