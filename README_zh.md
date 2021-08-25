@@ -136,7 +136,7 @@ docker-compose logs -f
 
 ### 等待节点同步完成
 
-我们可以在 [Polkadot Telemetry](https://telemetry.polkadot.io/#list/Nftmart%20Staging) 页面观察区块同步进度：
+我们可以在 [Polkadot Telemetry](https://telemetry.polkadot.io/#list/NFTMart_Staging) 页面观察区块同步进度：
 
 ![](https://i.imgur.com/aFD0I8D.png)
 
