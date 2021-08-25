@@ -83,7 +83,7 @@ cd nftmart-validator
 
 ## Set node name
 
-Every validator will sync his infomation to [Polkadot Telemetry](https://telemetry.polkadot.io/#list/NFTMart_Staging) server
+Every validator will sync his infomation to [Polkadot Telemetry](https://telemetry.polkadot.io/#list/NFTMart_Staging_V2) server
 
 ![](https://i.imgur.com/MYb2hBP.png)
 
@@ -128,7 +128,7 @@ docker-compose logs -f
 
 ### Sync blocks
 
-We can see the progress in [Polkadot Telemetry](https://telemetry.polkadot.io/#list/NFTMart_Staging) page：
+We can see the progress in [Polkadot Telemetry](https://telemetry.polkadot.io/#list/NFTMart_Staging_V2) page：
 
 ![](https://i.imgur.com/aFD0I8D.png)
 
