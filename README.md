@@ -83,7 +83,7 @@ cd nftmart-validator
 
 ## Set node name
 
-Every validator will sync his infomation to [Polkadot Telemetry](https://telemetry.polkadot.io/#list/Nftmart%20Staging) server
+Every validator will sync his infomation to [Polkadot Telemetry](https://telemetry.polkadot.io/#list/NFTMart_Staging_V2) server
 
 ![](https://i.imgur.com/MYb2hBP.png)
 
@@ -101,7 +101,7 @@ Change `.env` content，set our node name.
 If you want name your node as `victor-hugo-1482`，Please change `NAME=` value in  `.env` file.
 
 ```shell=
-NAME="victor-hugo-1482"
+NAME=victor-hugo-1482
 ```
 
 Then we can run the node and sync the blocks.
@@ -128,7 +128,7 @@ docker-compose logs -f
 
 ### Sync blocks
 
-We can see the progress in [Polkadot Telemetry](https://telemetry.polkadot.io/#list/Nftmart%20Staging) page：
+We can see the progress in [Polkadot Telemetry](https://telemetry.polkadot.io/#list/NFTMart_Staging_V2) page：
 
 ![](https://i.imgur.com/aFD0I8D.png)
 

@@ -89,7 +89,7 @@ cd nftmart-validator
 
 ## 设置节点名称
 
-每个验证人节点启动后会将自身基本信息同步到 [Polkadot Telemetry](https://telemetry.polkadot.io/#list/Nftmart%20Staging) 服务
+每个验证人节点启动后会将自身基本信息同步到 [Polkadot Telemetry](https://telemetry.polkadot.io/#list/NFTMart_Staging_V2) 服务
 
 ![](https://i.imgur.com/MYb2hBP.png)
 
@@ -106,7 +106,7 @@ cp example.env .env
 例如，如果你想将节点名称改为 `victor-hugo-1482`，应将 `.env` 文件中 `NAME=` 开头的一行修改为：
 
 ```shell=
-NAME="victor-hugo-1482"
+NAME=victor-hugo-1482
 ```
 然后就可以启动节点准备同步区块了
 
@@ -136,7 +136,7 @@ docker-compose logs -f
 
 ### 等待节点同步完成
 
-我们可以在 [Polkadot Telemetry](https://telemetry.polkadot.io/#list/Nftmart%20Staging) 页面观察区块同步进度：
+我们可以在 [Polkadot Telemetry](https://telemetry.polkadot.io/#list/NFTMart_Staging_V2) 页面观察区块同步进度：
 
 ![](https://i.imgur.com/aFD0I8D.png)
 
@@ -257,8 +257,4 @@ docker-compose down nftmart
 事实上，你还可以在树莓派上运行 NFTMart 节点，不过你需要自行编译二进制文件
 
 
-:::info
-**Find this document incomplete?** Leave a comment!
-:::
-
-###### tags: `Templates` `Documentation`
+### 如何升级节点

@@ -3,11 +3,11 @@ services:
 
   nftmart:
     restart: always
-    image: nftmart/node:staging
+    image: nftmart/node:staging-v2
     volumes:
     - /etc/localtime:/etc/localtime
     - ./entrypoint.sh:/entrypoint.sh
-    - ./data/:/data/
+    - ./state/:/data/
     - ./stagingRaw.json/:/stagingRaw.json
     ports:
     - 30333:30333
@@ -18,3 +18,4 @@ services:
     - --validator
     - --ws-port=9944
     - --port=30333
+    - --chain=/stagingRaw.json
