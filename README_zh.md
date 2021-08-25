@@ -79,7 +79,7 @@ docker version
 
 ## 获取测试网验证人节点部署脚本
 
-我们将通过 nftmart-validator 仓库 staging 分支提供的 `docker-compose.yml` 来启动 nftmart/node:staging 镜像
+我们将通过 nftmart-validator 仓库 staging 分支提供的 `docker-compose.yml` 来启动 nftmart/node:staging-v2 镜像
 
 我们将仓库的这个分支克隆到本地，并切换到 `nftmrat-validator` 目录下，后续操作均在此目录下进行
 ```shell=

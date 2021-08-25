@@ -73,7 +73,7 @@ If we have successful runing docker, we can deploy our nodes
 
 ## Get testnet validator and depoly scripts
 
-We provide nftmart-validator repo with staging branch ,use  `docker-compose.yml` to start nftmart/node:staging image.
+We provide nftmart-validator repo with staging branch ,use  `docker-compose.yml` to start nftmart/node:staging-v2 image.
 
 You need to clone the repo into your sever，and change the branch with `nftmrat-validator` 
 ```shell=
