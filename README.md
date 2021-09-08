@@ -236,8 +236,7 @@ It maybe the network connect fail and node can not sync blocks.
 Maybe the server hardware is not support the node server or the disk drive is full.
 
 
-Recomend to use Digital Ocean, Vultr, Scaleway, AWS, Google Cloud or other 
-overseas nodes.
+Recommend to use Digital Ocean, Vultr, Scaleway, AWS, Google Cloud, etc.
 
 ### How to bring my node back online?
 Restart your node ,and generate a new session key, and follow the steps above to create a new validator .
