@@ -89,7 +89,7 @@ cd nftmart-validator
 
 ## 设置节点名称
 
-每个验证人节点启动后会将自身基本信息同步到 [Polkadot Telemetry](https://telemetry.polkadot.io/#list/NFTMart_Staging_V2) 服务
+每个验证人节点启动后会将自身基本信息同步到 [Polkadot Telemetry](https://telemetry.polkadot.io/#list/0xd8439c3493c41fd5780a23536ca46052fed731a7536b82ec6cc51e80c4855052) 服务
 
 ![](https://i.imgur.com/MYb2hBP.png)
 
@@ -136,7 +136,7 @@ docker-compose logs -f
 
 ### 等待节点同步完成
 
-我们可以在 [Polkadot Telemetry](https://telemetry.polkadot.io/#list/NFTMart_Staging_V2) 页面观察区块同步进度：
+我们可以在 [Polkadot Telemetry](https://telemetry.polkadot.io/#list/0xd8439c3493c41fd5780a23536ca46052fed731a7536b82ec6cc51e80c4855052) 页面观察区块同步进度：
 
 ![](https://i.imgur.com/aFD0I8D.png)
 
