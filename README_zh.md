@@ -1,7 +1,6 @@
-# 成为 NFTMart 测试网验证人
+# 成为 NFTMart Mainnet 验证人
 
-[English version](https://github.com/NFTT-studio/nftmart-validator/blob/staging/README.md)
-
+[English version](./README.md)
 
 # 准备工作
 
@@ -21,7 +20,7 @@
 
 ## 安装 docker 和 docker-compose
 
-为了支持在不同的环境下部署，NFTMart 测试网的验证人节点通过 docker 镜像打包并分发
+为了支持在不同的环境下部署，NFTMart Mainnet 的验证人节点通过 docker 镜像打包并分发
 
 这要求在服务器上安装 docker 和 docker-compose
 
@@ -77,19 +76,19 @@ docker version
 
 完成 docker 相关的配置后，我们就可以着手部署节点了
 
-## 获取测试网验证人节点部署脚本
+## 获取验证人节点部署脚本
 
-我们将通过 nftmart-validator 仓库 staging 分支提供的 `docker-compose.yml` 来启动 nftmart/node:staging-v2 镜像
+我们将通过 nftmart-validator 仓库 main 分支提供的 `docker-compose.yml` 来启动 nftmart/node:mainnet 镜像
 
-我们将仓库的这个分支克隆到本地，并切换到 `nftmrat-validator` 目录下，后续操作均在此目录下进行
+我们将仓库的这个分支克隆到本地，并切换到 `nftmart-validator` 子目录下，后续操作均在此目录下进行
 ```shell=
-git clone -b staging https://github.com/NFTT-studio/nftmart-validator
+git clone -b main https://github.com/NFTT-studio/nftmart-validator
 cd nftmart-validator
 ```
 
 ## 设置节点名称
 
-每个验证人节点启动后会将自身基本信息同步到 [Polkadot Telemetry](https://telemetry.polkadot.io/#list/0xd8439c3493c41fd5780a23536ca46052fed731a7536b82ec6cc51e80c4855052) 服务
+每个验证人节点启动后会将自身基本信息同步到 [Polkadot Telemetry](https://telemetry.polkadot.io/#list/0xfcf9074303d8f319ad1bf0195b145871977e7c375883b834247cb01ff22f51f9) 服务
 
 ![](https://i.imgur.com/MYb2hBP.png)
 
@@ -136,7 +135,7 @@ docker-compose logs -f
 
 ### 等待节点同步完成
 
-我们可以在 [Polkadot Telemetry](https://telemetry.polkadot.io/#list/0xd8439c3493c41fd5780a23536ca46052fed731a7536b82ec6cc51e80c4855052) 页面观察区块同步进度：
+我们可以在 [Polkadot Telemetry](https://telemetry.polkadot.io/#list/0xfcf9074303d8f319ad1bf0195b145871977e7c375883b834247cb01ff22f51f9) 页面观察区块同步进度：
 
 ![](https://i.imgur.com/aFD0I8D.png)
 
@@ -161,13 +160,13 @@ docker-compose exec nftmart rotate-key
 
 ## 创建 Stash 和 Controller 账号
 
-进入 https://polkadot.js.org/apps/?rpc=wss://staging-ws.nftmart.io#/accounts 创建两个账号，并向其中转入一定数量的 NMT Token
+进入 https://polkadot.js.org/apps/?rpc=wss://mainnet.nftmart.io/rpc/ws#/accounts 创建两个账号，并向其中转入一定数量的 NMT Token
 
 其中 Stash 账号用于存放资金，而 Controller 账号则用于控制 Stash 账号
 
 你也可以用同一个账号同时作为 Stash 和 Controller 账号
 
-进入 https://polkadot.js.org/apps/?rpc=wss://staging-ws.nftmart.io#/staking/actions 
+进入 https://polkadot.js.org/apps/?rpc=wss://mainnet.nftmart.io/rpc/ws#/staking/actions
 
 ![](https://i.imgur.com/DLncJWI.png)
 
@@ -201,7 +200,7 @@ docker-compose exec nftmart rotate-key
 
 ## 更新节点程序
 
-后续节点程序的更新依然会以 docker 镜像的方式发布，你只需要通过如下命令获取 nftmart-validator 仓库 staging 分支最新的部署代码：
+后续节点程序的更新依然会以 docker 镜像的方式发布，你只需要通过如下命令获取最新的部署代码：
 ```shell=
 git pull
 ```
@@ -229,32 +228,3 @@ docker-compose up -d nftmart
 ```shell=
 docker-compose down nftmart
 ```
-
-
-# 附录与常见问题
-
-### Stash / Controller / Session Keys 的区别
-
-参考文档：
-
-- https://wiki.polkadot.network/docs/learn-keys/#controller-and-stash-keys
-- https://wiki.polkadot.network/docs/learn-keys/#session-keys
-
-### 我的节点为什么掉线了
-这通常是由于服务器网络状况不佳导致连不上 peer 节点，无法同步区块
-也有可能是服务器配置过低，内存资源不足或磁盘已满等原因导致的
-
-由于众所周知的原因，推荐使用国外云厂商如 Digital Ocean, Vultr, Scaleway, AWS, Google Cloud 的节点，或者国内云厂商的海外节点
-
-### 节点掉线了怎么办？
-重启节点，并生成新的 Session Key，按照流程重新申请验证人
-如果节点经常掉线，可能会被惩罚 (Slash)，导致资金损失
-
-
-### 可以用家用台式机/笔记本运行验证人节点吗
-理论上可行, 如果你能保证它 7x24 小时运行，而且有公网 IP
-保持节点在这样的环境稳定运行需要较高水平的运维技能
-事实上，你还可以在树莓派上运行 NFTMart 节点，不过你需要自行编译二进制文件
-
-
-### 如何升级节点
