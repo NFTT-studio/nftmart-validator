@@ -1,6 +1,6 @@
-# Become a validator of NFTMart testnet  
+# Become a validator of NFTMart mainnet
 
-[中文版](https://github.com/NFTT-studio/nftmart-validator/blob/staging/README_zh.md)
+[中文版](./README_zh.md)
 
 # Prepare working
 
@@ -71,19 +71,19 @@ If you only got client infomation , maybe you need to check the cmd above.
 
 If we have successful runing docker, we can deploy our nodes
 
-## Get testnet validator and depoly scripts
+## Get mainnet validator and depoly scripts
 
-We provide nftmart-validator repo with staging branch ,use  `docker-compose.yml` to start nftmart/node:staging-v2 image.
+We provide nftmart-validator repo with main branch ,use  `docker-compose.yml` to start nftmart/node:mainnet image.
 
 You need to clone the repo into your sever，and change the branch with `nftmrat-validator` 
 ```shell=
-git clone -b staging https://github.com/NFTT-studio/nftmart-validator
+git clone -b main https://github.com/NFTT-studio/nftmart-validator
 cd nftmart-validator
 ```
 
 ## Set node name
 
-Every validator will sync his infomation to [Polkadot Telemetry](https://telemetry.polkadot.io/#list/0xd8439c3493c41fd5780a23536ca46052fed731a7536b82ec6cc51e80c4855052) server
+Every validator will sync his infomation to [Polkadot Telemetry](https://telemetry.polkadot.io/#list/0xfcf9074303d8f319ad1bf0195b145871977e7c375883b834247cb01ff22f51f9) server
 
 ![](https://i.imgur.com/MYb2hBP.png)
 
@@ -128,7 +128,7 @@ docker-compose logs -f
 
 ### Sync blocks
 
-We can see the progress in [Polkadot Telemetry](https://telemetry.polkadot.io/#list/0xd8439c3493c41fd5780a23536ca46052fed731a7536b82ec6cc51e80c4855052) page：
+We can see the progress in [Polkadot Telemetry](https://telemetry.polkadot.io/#list/0xfcf9074303d8f319ad1bf0195b145871977e7c375883b834247cb01ff22f51f9) page：
 
 ![](https://i.imgur.com/aFD0I8D.png)
 
@@ -153,14 +153,14 @@ Save that session Key and we will use it in next step.
 
 ## Create Stash and Controller account
 
-Open https://polkadot.js.org/apps/?rpc=wss://staging-ws.nftmart.io#/accounts to create two account，and send some NMT Token to them.
+Open https://polkadot.js.org/apps/?rpc=wss://mainnet.nftmart.io/rpc/ws#/accounts to create two account，and send some NMT Token to them.
 
 Stash account use to keep token， Controller account to manage stash account.
 
 You can also use same account as Stash and Controller account.
 
 
-Open https://polkadot.js.org/apps/?rpc=wss://staging-ws.nftmart.io#/staking/actions 
+Open https://polkadot.js.org/apps/?rpc=wss://mainnet.nftmart.io/rpc/ws#/staking/actions
 
 ![](https://i.imgur.com/DLncJWI.png)
 
@@ -195,7 +195,7 @@ As your can see ,our example node  `victor-hugo-1482` already produce two blocks
 
 ## Update nodes
 
-The node update will delivery by docker image，you need to get the latest version of  validator in nftmart-validator repo's staging branch：
+The node update will delivery by docker image，you need to get the latest version of validator in nftmart-validator repo's main branch：
 ```shell=
 git pull
 ```
